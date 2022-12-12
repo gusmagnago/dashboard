@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import Button from '../Button';
 import { StylingProps } from './types';
 
 export const Container = styled.div<StylingProps>`
@@ -27,23 +28,8 @@ export const ButtonWrapper = styled.div`
   width: 100%;
 `;
 
-export const Button = styled.button<StylingProps>`
-  padding: 0.5rem;
-  border-radius: 10px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  ${({ theme: { color, box, spacing }, isOpen }) => css`
-    border: 1px solid ${color.disabled};
-    box-shadow: ${box.shadowBottomRight};
-    color: ${color.black};
-
-    &:active {
-      box-shadow: ${box.innerShadow};
-    }
-
+export const StyledButton = styled(Button)<StylingProps>`
+  ${({ theme: { spacing }, isOpen }) => css`
     ${isOpen
       ? css`
           margin-bottom: ${spacing.large};

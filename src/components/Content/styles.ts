@@ -6,5 +6,11 @@ export const Container = styled.div`
       color: ${color.black};
       padding: ${spacing.large} ${spacing.medium};
 `}
+
+  height: 100%;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
   grid-area: C;
 `;

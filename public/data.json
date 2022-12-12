@@ -1,0 +1,186 @@
+[
+  {
+    "type": "login-faild",
+    "detail": "User loggin faild",
+    "time": "2022-10-09T19:48:00.000Z",
+    "severity": "error",
+    "objectType": "user",
+    "objectName": "User001"
+  },
+  {
+    "type": "request-new-password",
+    "detail": "User001 has requested new password",
+    "time": "2022-10-09T19:52:00.000Z",
+    "severity": "info",
+    "objectType": "user",
+    "objectName": "User001"
+  },
+  {
+    "type": "sent-new-password",
+    "detail": "System has sent new password e-mail to the User001",
+    "time": "2022-10-09T19:54:00.000Z",
+    "severity": "warning",
+    "objectType": "api-gateway",
+    "objectName": "Mailer"
+  },
+  {
+    "type": "change-password",
+    "detail": "User001 has changed their password",
+    "time": "2022-10-09T19:58:00.000Z",
+    "severity": "info",
+    "objectType": "api-gateway",
+    "objectName": "Mailer"
+  },
+  {
+    "type": "login",
+    "detail": "User001 loggin in in their account",
+    "time": "2022-10-09T20:00:00.000Z",
+    "severity": "info",
+    "objectType": "user",
+    "objectName": "User001"
+  },
+  {
+    "type": "avatar-change",
+    "detail": "User001 has changed their avatar",
+    "time": "2022-10-09T20:05:18.000Z",
+    "severity": "info",
+    "objectType": "user",
+    "objectName": "User001"
+  },
+  {
+    "type": "403-forbidden",
+    "detail": "User001 has tried to access cam4",
+    "time": "2022-10-09T20:07:00.000Z",
+    "severity": "error",
+    "objectType": "user",
+    "objectName": "User001"
+  },
+  {
+    "type": "403-forbidden",
+    "detail": "User001 has tried to access cam2",
+    "time": "2022-12-09T22:20:06Z",
+    "severity": "error",
+    "objectType": "user",
+    "objectName": "User001"
+  },
+  {
+    "type": "403-forbidden",
+    "detail": "User001 has tried to access unauthorized content",
+    "time": "2022-12-09T23:42:48Z",
+    "severity": "error",
+    "objectType": "user",
+    "objectName": "User004"
+  },
+  {
+    "type": "403-forbidden",
+    "detail": "User001 has tried to access unauthorized content",
+    "time": "2022-12-09T23:42:48Z",
+    "severity": "error",
+    "objectType": "user",
+    "objectName": "User004"
+  },
+  {
+    "type": "security-alert",
+    "detail": "cam05 is being accessed by unkwon user",
+    "time": "2022-12-09T23:42:48Z",
+    "severity": "critical",
+    "objectType": "api-gateway",
+    "objectName": "SecSystem"
+  },
+  {
+    "type": "security-alert",
+    "detail": "cam04 is being accessed by unkwon user",
+    "time": "2022-12-10T03:39:33Z",
+    "severity": "critical",
+    "objectType": "api-gateway",
+    "objectName": "SecSystem"
+  },
+  {
+    "type": "security-alert",
+    "detail": "cam02 is being accessed by unkwon user",
+    "time": "2022-12-10T07:51:20Z",
+    "severity": "critical",
+    "objectType": "api-gateway",
+    "objectName": "SecSystem"
+  },
+  {
+    "type": "security-alert",
+    "detail": "cam01 is being accessed by unkwon user",
+    "time": "2022-12-10T12:01:43Z",
+    "severity": "critical",
+    "objectType": "api-gateway",
+    "objectName": "SecSystem"
+  },
+  {
+    "type": "security-alert",
+    "detail": "cam01 is being accessed by unkwon user",
+    "time": "2022-12-10T12:01:43Z",
+    "severity": "critical",
+    "objectType": "api-gateway",
+    "objectName": "SecSystem"
+  },
+  {
+    "type": "security-alert",
+    "detail": "cam05 is being accessed by unkwon user",
+    "time": "2022-12-10T14:11:24Z",
+    "severity": "critical",
+    "objectType": "api-gateway",
+    "objectName": "SecSystem"
+  },
+  {
+    "type": "security-alert",
+    "detail": "cam01 is being accessed by unkwon user",
+    "time": "2022-12-10T14:21:00Z",
+    "severity": "critical",
+    "objectType": "api-gateway",
+    "objectName": "SecSystem"
+  },
+  {
+    "type": "security-alert",
+    "detail": "cam03 is being accessed by unkwon user",
+    "time": "2022-12-10T20:28:04Z",
+    "severity": "critical",
+    "objectType": "api-gateway",
+    "objectName": "SecSystem"
+  },
+  {
+    "type": "security-alert",
+    "detail": "cam01 is being accessed by unkwon user",
+    "time": "2022-12-10T21:06:05Z",
+    "severity": "critical",
+    "objectType": "api-gateway",
+    "objectName": "SecSystem"
+  },
+  {
+    "type": "security-alert",
+    "detail": "cam04 is being accessed by unkwon user",
+    "time": "2022-12-11T01:04:35Z",
+    "severity": "critical",
+    "objectType": "api-gateway",
+    "objectName": "SecSystem"
+  },
+  {
+    "type": "security-alert",
+    "detail": "cam02 is being accessed by unkwon user",
+    "time": "2022-12-11T03:22:12Z",
+    "severity": "critical",
+    "objectType": "api-gateway",
+    "objectName": "SecSystem"
+  },
+  {
+    "type": "login",
+    "detail": "User002 loggin in in their account",
+    "time": "2022-12-11T06:17:25Z",
+    "severity": "info",
+    "objectType": "user",
+    "objectName": "User002"
+  },
+  {
+    "type": "change-settings",
+    "detail": "User002 has changed settings",
+    "time": "2022-12-11T18:57:28Z",
+    "severity": "warning",
+    "objectType": "user",
+    "objectName": "User002"
+  }
+]

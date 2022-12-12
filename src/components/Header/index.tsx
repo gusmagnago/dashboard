@@ -1,14 +1,10 @@
-import { Container, LogoWrapper } from './styles';
+import { Container } from './styles';
+import Logo from '../Logo';
 
-import { TfiDashboard } from 'react-icons/tfi';
-
-const Header: React.FC = () => {
+const Header = () => {
   return (
     <Container>
-      <LogoWrapper>
-        <TfiDashboard />
-        <p>Dashboard Name</p>
-      </LogoWrapper>
+      <Logo />
     </Container>
   );
 };

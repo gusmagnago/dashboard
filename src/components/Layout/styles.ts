@@ -1,14 +1,33 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { StylingProps } from './types';
 
 export const Wrapper = styled.div<StylingProps>`
   display: grid;
-  grid-template-columns: ${({ isOpen }) => (isOpen ? '300px' : '80px')} auto;
-  grid-template-rows: 80px auto;
   grid-template-areas:
-    'AS H'
-    'AS C';
+    'H'
+    'C'
+    'AS';
 
+  grid-template-rows: ${({ isOpen }) =>
+    isOpen ? '80x 10px 100%' : '80px auto 100px'};
   height: 100vh;
-  width: 100%;
+  max-width: 100vw;
+
+  ${({ theme: { media }, isOpen }) => css`
+    ${media.gteMedium} {
+      grid-template-areas:
+        'AS H'
+        'AS C';
+
+      grid-template-rows: 80px auto;
+
+      ${isOpen
+        ? css`
+            grid-template-columns: 200px auto;
+          `
+        : css`
+            grid-template-columns: 80px auto;
+          `}
+    }
+  `}
 `;

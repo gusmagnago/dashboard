@@ -1,30 +1,46 @@
+import { color, shadow, spacing, media } from './utils';
+
 export default {
   color: {
-    background: '#f2f2f2',
-    primary: '#4B70E2',
-    secondary: '#eda6c8',
-    tertiary: '#e3886a',
+    background: color.background,
+    primary: color.primary,
+    secondary: color.secondary,
+    tertiary: color.tertiary,
+    bright: color.bright,
 
-    white: 'white',
-    black: '#2E3237',
-    disabled: '#e0e0e0',
+    grey: color.grey,
+    white: color.white,
+    black: color.black,
 
-    success: '#b9ecc5',
-    info: '#5350f1',
-    error: '#f15050',
+    disabled: color.grey,
+
+    success: color.success,
+    info: color.info,
+    error: color.error,
   },
   box: {
-    shadow: `5px 5px 10px #b6b6b6,
-             -5px -5px 10px #ffffff`,
-    shadowBottomRight: '5px 5px 10px #b6b6b6',
-    innerShadow: `inset 5px 5px 10px #b6b6b6,
-            inset -5px -5px 10px #ffffff`,
+    shadow: shadow.primary,
+    innerShadow: shadow.inner,
+    shadowBottomRight: shadow.bottomRight,
+    buttonShadow: shadow.button,
   },
   spacing: {
-    xs: '0.5rem',
-    small: '1rem',
-    medium: '1.5rem',
-    large: '2rem',
-    xl: '3rem',
+    xs: spacing.xs,
+    small: spacing.small,
+    medium: spacing.medium,
+    large: spacing.large,
+    xl: spacing.xl,
+  },
+  media: {
+    mobile: media.mobile,
+    tablet: media.tablet,
+    smallDesk: media.smallDesk,
+    largeDesk: media.largeDesk,
+
+    gteSmall: media.gteSmallMedia,
+    gteMedium: media.gteMediumMedia,
+
+    lteSmall: media.lteSmallMedia,
+    lteMedium: media.lteMediumMedia,
   },
 };

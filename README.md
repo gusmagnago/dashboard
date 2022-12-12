@@ -1,0 +1,1 @@
+<!-- remember to insert broser supports for server-sent events // also to add how to start the project // -->

@@ -1,28 +1,19 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
   grid-area: H;
   justify-content: flex-end;
 
-  ${({ theme: { color, spacing } }) => `
-      background-color: ${color.background};
-      color: ${color.black};
-      border-bottom: 2px solid ${color.white};
-      padding: ${spacing.xs};
-`}
+  ${({ theme: { color, spacing, media } }) => css`
+    background-color: ${color.background};
+    color: ${color.black};
+    border-bottom: 0.2rem solid ${color.bright};
+    padding: ${spacing.xs};
+    ${media.gteSmall} {
+      padding: ${spacing.medium} ${spacing.small};
+      align-items: center;
+    }
+  `}
   z-index: 1;
-`;
-
-export const LogoWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  svg {
-    font-size: 9rem;
-  }
-  p {
-    font-size: 18px;
-  }
 `;

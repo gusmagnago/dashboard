@@ -1,25 +1,16 @@
-import { Button, ButtonWrapper, Container } from './styles';
+import { ButtonWrapper, Container, StyledButton } from './styles';
 import { TfiAngleDoubleRight, TfiAngleDoubleLeft } from 'react-icons/tfi';
 import { PropTypes } from './types';
 
-const Aside: React.FC<PropTypes> = ({ open, onClick }) => {
+const Aside = ({ open, onClick }: PropTypes) => {
   return (
     <>
       <Container isOpen={open}>
-        {open ? (
-          <>
-            <ButtonWrapper>
-              <Button onClick={onClick} isOpen={open}>
-                <TfiAngleDoubleLeft />
-              </Button>
-            </ButtonWrapper>
-            <h1>Aside</h1>
-          </>
-        ) : (
-          <Button onClick={onClick}>
-            <TfiAngleDoubleRight />
-          </Button>
-        )}
+        <ButtonWrapper>
+          <StyledButton onClick={onClick}>
+            {open ? <TfiAngleDoubleLeft /> : <TfiAngleDoubleRight />}
+          </StyledButton>
+        </ButtonWrapper>
       </Container>
     </>
   );
