@@ -1,25 +1,16 @@
 import { useEffect, useState } from 'react';
 import { EventInterface } from './types';
 
-export const useEvents = () => {
-  const [events, setEvents] = useState<EventInterface[]>();
-  const [loading, setLoading] = useState<boolean>(true);
+import { useQuery } from 'react-query';
 
-  useEffect(() => {
-    if (!events?.length) {
-      loading;
-      const getEvents = () => {
-        fetch('/data.json')
-          .then((res) => res.json())
-          .then((events) => setEvents(events));
-      };
-      setLoading(false);
-      getEvents();
-    }
-  }, []);
+interface IUseEvents {
+  pageParam: number;
+}
 
-  return {
-    events,
-    loading,
-  };
+export const useEvents = ({ pageParam }: IUseEvents) => {
+  return useQuery(
+    ['events', pageParam],
+    () => fetch(`/data.json?page=${pageParam}`).then((res) => res.json()),
+    { staleTime: 10000 }
+  );
 };

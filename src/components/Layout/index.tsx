@@ -5,12 +5,10 @@ import Header from '../Header';
 import { Wrapper } from './styles';
 
 const Layout: React.FC = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-
   return (
-    <Wrapper isOpen={isOpen}>
+    <Wrapper>
       <Header />
-      <Aside open={isOpen} onClick={() => setIsOpen(!isOpen)} />
+      <Aside />
       <Content />
     </Wrapper>
   );

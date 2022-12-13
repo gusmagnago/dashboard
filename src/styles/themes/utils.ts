@@ -1,8 +1,6 @@
 export const color = {
   background: '#f2f2f2',
   primary: '#4B70E2',
-  secondary: '#eda6c8',
-  tertiary: '#e3886a',
   bright: '#cbdff5',
 
   white: '#ffffff',
@@ -41,6 +39,10 @@ export const spacing = {
   medium: '1.5rem',
   large: '2rem',
   xl: '3rem',
+};
+
+export const borderRadius = {
+  borderRadius: '10px',
 };
 
 export const viewPorts = {

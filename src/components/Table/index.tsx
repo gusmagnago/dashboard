@@ -3,7 +3,10 @@ import {
   createColumnHelper,
   flexRender,
   getCoreRowModel,
+  getFilteredRowModel,
+  getPaginationRowModel,
   useReactTable,
+  SortingState,
 } from '@tanstack/react-table';
 
 import {
@@ -11,9 +14,13 @@ import {
   HeaderCell,
   Row,
   TableBody,
+  TableContainer,
   TableHeader,
   TableWrapper,
 } from './styles';
+
+import Card from '../Card';
+import Pagination from './components/Pagination';
 
 type TableProps = {
   data: EventInterface[];
@@ -40,7 +47,9 @@ const Table = ({ data }: TableProps) => {
     }),
     columnHelper.accessor((row) => row.severity, {
       id: 'severity',
-      cell: (info) => info.getValue(),
+      cell: (info) => {
+        info.getValue();
+      },
       header: () => <span>Severity</span>,
     }),
     columnHelper.accessor((row) => row.objectName, {
@@ -59,38 +68,50 @@ const Table = ({ data }: TableProps) => {
     data,
     columns,
     getCoreRowModel: getCoreRowModel(),
+    getFilteredRowModel: getFilteredRowModel(),
+    getPaginationRowModel: getPaginationRowModel(),
   });
 
   return (
-    <TableWrapper>
-      <TableHeader>
-        {table.getHeaderGroups().map((headerGroup) => (
-          <Row key={headerGroup.id}>
-            {headerGroup.headers.map((header) => (
-              <HeaderCell key={header.id}>
-                {header.isPlaceholder
-                  ? null
-                  : flexRender(
-                      header.column.columnDef.header,
-                      header.getContext()
-                    )}
-              </HeaderCell>
-            ))}
-          </Row>
-        ))}
-      </TableHeader>
-      <TableBody>
-        {table.getRowModel().rows.map((row) => (
-          <Row key={row.id}>
-            {row.getVisibleCells().map((cell) => (
-              <Cell key={cell.id}>
-                {flexRender(cell.column.columnDef.cell, cell.getContext())}
-              </Cell>
-            ))}
-          </Row>
-        ))}
-      </TableBody>
-    </TableWrapper>
+    <>
+      <Card>
+        <TableWrapper>
+          <TableContainer>
+            <TableHeader>
+              {table.getHeaderGroups().map((headerGroup) => (
+                <Row key={headerGroup.id}>
+                  {headerGroup.headers.map((header) => (
+                    <HeaderCell key={header.id}>
+                      {header.isPlaceholder
+                        ? null
+                        : flexRender(
+                            header.column.columnDef.header,
+                            header.getContext()
+                          )}
+                    </HeaderCell>
+                  ))}
+                </Row>
+              ))}
+            </TableHeader>
+            <TableBody>
+              {table.getRowModel().rows.map((row) => (
+                <Row key={row.id}>
+                  {row.getVisibleCells().map((cell) => (
+                    <Cell key={cell.id}>
+                      {flexRender(
+                        cell.column.columnDef.cell,
+                        cell.getContext()
+                      )}
+                    </Cell>
+                  ))}
+                </Row>
+              ))}
+            </TableBody>
+          </TableContainer>
+        </TableWrapper>
+        <Pagination table={table} />
+      </Card>
+    </>
   );
 };
 

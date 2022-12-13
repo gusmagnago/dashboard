@@ -5,7 +5,7 @@ const Logo = () => {
     <div>
       <LogoWrapper>
         <LogoIcon />
-        <p>Dashboard Name</p>
+        <p>Security Report</p>
       </LogoWrapper>
     </div>
   );

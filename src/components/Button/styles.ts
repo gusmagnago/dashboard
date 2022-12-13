@@ -8,7 +8,6 @@ export const Wrapper = styled.button<ButtonProps>`
   justify-content: center;
 
   ${({ theme: { spacing, color, box }, disabled, variant }) => css`
-    border: 0.1rem solid ${color.grey};
     box-shadow: ${box.buttonShadow};
     padding: ${spacing.xs} ${spacing.small};
     color: ${color.black};

@@ -3,11 +3,17 @@ import { ThemeProvider } from 'styled-components';
 import GlobalStyles from './styles/globalStyles';
 import theme from './styles/themes/theme';
 
+import { QueryClient, QueryClientProvider } from 'react-query';
+
+const queryClient = new QueryClient();
+
 const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
-      <GlobalStyles />
-      <Layout />
+      <QueryClientProvider client={queryClient}>
+        <GlobalStyles />
+        <Layout />
+      </QueryClientProvider>
     </ThemeProvider>
   );
 };
