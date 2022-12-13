@@ -26,6 +26,10 @@ export type Colors = {
   error: string;
 };
 
+export type BorderRadius = {
+  borderRadius: string;
+};
+
 export type BoxShadow = {
   shadow: string;
   shadowBottomRight: string;

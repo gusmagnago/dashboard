@@ -1,4 +1,4 @@
-import { color, shadow, spacing, media } from './utils';
+import { color, shadow, spacing, media, borderRadius } from './utils';
 
 export default {
   color: {
@@ -43,4 +43,5 @@ export default {
     lteSmall: media.lteSmallMedia,
     lteMedium: media.lteMediumMedia,
   },
+  borderRadius: borderRadius,
 };

@@ -7,22 +7,27 @@ const largePadding = css`
     `};
 `;
 
-export const TableWrapper = styled.table`
-  ${({ theme: { box, spacing } }) => css`
-    ${largePadding}
-    border-radius: 10px;
-    margin-top: ${spacing.large};
-    box-shadow: ${box.shadow};
+export const TableWrapper = styled.div`
+  overflow-y: auto;
+  height: 450px;
+
+  ${({ theme: { spacing } }) => css`
+    padding: ${spacing.small} 0;
   `}
+`;
+
+export const TableContainer = styled.table`
   width: 100%;
-  min-height: 20rem;
 `;
 
 export const TableHeader = styled.thead`
   border-radius: 10px;
-  ${({ theme: { box } }) => css`
+  ${({ theme: { box, color } }) => css`
     box-shadow: ${box.shadow};
+    background-color: ${color.background};
   `}
+  position: sticky;
+  top: 0;
 `;
 
 export const HeaderCell = styled.th`
